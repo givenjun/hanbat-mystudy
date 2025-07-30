@@ -7,8 +7,6 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.google.guava:guava:33.4.5-jre'
-    
     testImplementation 'org.junit.jupiter:junit-jupiter:5.12.1'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
@@ -24,7 +22,7 @@ application {
 }
 
 jar {
-    archiveFileName= 'myapp.jar'
+    archiveFileName = 'myapp.jar'
 }
 
 tasks.named('test') {
@@ -33,4 +31,8 @@ tasks.named('test') {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
+}
+
+tasks.named('run') {
+    standardInput = System.in
 }
