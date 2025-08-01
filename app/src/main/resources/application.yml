@@ -1,0 +1,13 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: myapp
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/
+  thymeleaf:
+    prefix: file:src/main/resources/templates/ # 템플릿 파일 경로
+    suffix: .html # 템플릿 파일 확장자
